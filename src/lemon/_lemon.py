@@ -1,5 +1,6 @@
 import math
 import re
+import warnings
 from typing import Callable, Dict, List, Optional, Tuple, Union
 
 import numpy as np
@@ -554,7 +555,7 @@ def _explain_record_pair(
             for source in ["a", "b"]
         ]
         if not math.isclose(explanation_a.prediction_score, explanation_b.prediction_score, rel_tol=1e-2):
-            raise AssertionError(
+            warnings.warn(
                 f"The prediction score from explanation a and b should be (at least almost) identical, but was {explanation_a.prediction_score} and {explanation_b.prediction_score}"
             )
         string_representation = {

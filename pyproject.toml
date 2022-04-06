@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "lemon-explain"
-version = "0.1.0"
+version = "0.1.1"
 description = "LEMON: Explainable Entity Matching"
 license = "MIT"
 authors = ["Nils Barlaug <nils.barlaug@gmail.com>"]
